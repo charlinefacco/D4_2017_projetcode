@@ -112,3 +112,8 @@ footer::before{
   -webkit-border-radius:7px;
   border-radius:7px;
 }
+
+.bio-content-block {
+    max-width: 960px;
+    margin: 0 auto;
+    columns: 2;
