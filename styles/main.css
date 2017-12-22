@@ -1,73 +1,58 @@
-body{
-  background-color: #dddddd
-  color: #B8CBD1;
-  margin: 0;
+body {
+  font-family: 'Abel', sans-serif;
+  line-height: 20px;
 }
 
-header{
-    background-color: #B8CBD1;
-    color: #dddddd;
-    padding : 6em;
-    position: relative;
+h1 {
+  font-family: 'Oswald', sans-serif;
+  line-height: 70px;
+  font-size: 46px;
+  text-transform: uppercase;
 }
 
-section{
-  max-width: 42em;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-
+h4 {
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
 }
 
-header::after{
-  background-color: #B8CBD1;
-  content:" ";
-  display: block;
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg) translateY(30%);
-}
-
-footer {
-  background-color: #B8CBD1;
-  color: #dddddd;
-  padding: 2em;
-  position: relative;
-}
-
-footer::before{
-  background-color: #B8CBD1;
-  content:" ";
-  display: block;
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 100%;
+h2 {
+  font-family: 'Abel', sans-serif;
+  text-align: center;
+  color: #9DA6B6;
+  font-size: 30px;
+  padding-top: 2em;
 
 }
 
-.linlist{
-  list-style-type: none;
+h3 {
+  padding-bottom: 3em;
+  font-family: 'Droid Serif', serif;
+  text-align: center;
+  color: #9DA6B6;
 }
 
-.linklist li{
-  margin: 2em;
+a {
+  color : #B8CBD1;
+  transition: all 0.6s;
+  padding-top: 2em;
 }
 
-.linklist a{
-  color: #fff;
+a:hover {
+  color : #9DA6B6;
 }
 
-.nastyadvert{
-  background-color: #B8CBD1;
-  min-height: 90vh;
-  color: #fff;
-  background-image: url(background-01.jpg);
+a::after {
+  content: " ";
+}
+
+header {
+  min-height: 70vh;
+}
+
+.nastyadvert {
+  min-height: 70vh;
+  color: #9DA6B6;
+  background-image: url(images/charlinefacco-sm.jpg);
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -76,44 +61,129 @@ footer::before{
   justify-content: center;
 }
 
-.nastyadvert h1{
-  font-size: 4em;
-  font-family: 'Contrail One', cursive;
+@media (min-width: 800px) {
+  .nastyadvert {
+    background-image: url(images/charlinefacco-lg.jpg);
+  }
+ }
+
+ @media (max-width: 800px) {
+   .comp-section-content {
+     flex-wrap: wrap;
+     justify-content: space-around;   }
+  }
+
+.header-content-block {
+  background: rgba(11,204,83,0.6);
+  padding : 100px;
   text-align: center;
 }
 
-.nastyadvert p{
-  font-size: 2em;
-  font-family: 'Abel', sans-serif;
+header-content-block h1 {
+  font-size: 4.25em;
   text-align: center;
-}
+  }
 
-.mywork ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#bio {
+  min-height: 45vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
+  align-items: center;
 }
 
-.mywork li{
-  max-width: 480px;
-  margin: 1em;
+#bio h1 {
+  display: none;
 }
 
-.mywork img{
-  width: 100%
-}
-
-.arrondie {
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
+#bio p {
+  text-align: justify;
+  font-family: 'Open Sans', sans-serif;
+  color: #9DA6B6;
 }
 
 .bio-content-block {
-    max-width: 960px;
-    margin: 0 auto;
-    columns: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  columns: 2;
+}
+
+#comp {
+  background-color: #e0e7ea;
+  color : #fff;
+}
+
+.comp-section-content {
+ display: flex;
+ justify-content: center;
+}
+
+.comp-content {
+  background-color: #fff;
+  width : auto;
+  margin : 3%;
+}
+
+.comp-content p {
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: justify;
+  font-family: 'Open Sans', sans-serif;
+  color: #9DA6B6;
+}
+
+.comp-content h2 {
+  padding-left: 1.3em;
+  font-family: 'Abel', sans-serif;
+}
+
+.comp-content img {
+  width : 100%;
+}
+
+.comp-content a {
+  display: block;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  float: right;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.portfolio-content-item {
+  border: 3px solid #e0e7ea;
+  max-width: 480px;
+  margin : 20px;
+  position : relative;
+}
+
+.portfolio-content-item h1 {
+  font-size: 4.25em;
+  text-align: center;
+}
+
+.portfolio-content-item h2 {
+  position: absolute;
+  font-size: 15px;
+  bottom : 1%;
+  right: 7%;
+}
+
+.portfolio-content-item img {
+  width : 100%;
+}
+
+footer {
+  background-color: #e0e7ea;
+  font-family: 'Open Sans', sans-serif;
+  color: #9DA6B6;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  padding-left: 4em;
+  line-height: 40px;
+}
